@@ -12,11 +12,11 @@
 #
 class ssh::server (
   $ensure = present,
-){ 
+){
 
   case $::operatingsystem {
-     RedHat,CentOS: { include ssh::server::redhat}
-     default: { fail "Unsupported operatingsystem ${::operatingsystem}" }
+    RedHat,CentOS: { include ssh::server::redhat}
+    default: { fail "Unsupported operatingsystem ${::operatingsystem}" }
   }
 
 }

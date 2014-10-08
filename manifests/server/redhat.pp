@@ -13,7 +13,7 @@
 class ssh::server::redhat (
   $ensure = present,
   $ensure_status = running,
-){ 
+){
 
   include ssh::server::params
 
