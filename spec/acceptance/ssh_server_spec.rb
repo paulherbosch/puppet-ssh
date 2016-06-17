@@ -25,7 +25,7 @@ describe 'ssh::server' do
       # it { should contain 'PermitRootLogin yes' }
 
       # new syntax?
-      its(:content) { should match /PermitRootLogin yes/ }
+      its(:content) { should match /PermitRootLogin no/ }
     end
 
 		describe port(22) do
