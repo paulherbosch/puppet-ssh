@@ -18,7 +18,7 @@ describe 'ssh::server' do
       apply_manifest(pp, :catch_changes => true)
     end
 
-    describe file '/etc/ssh/sshd_config'
+    describe file('/etc/ssh/sshd_config') do
       it { is_expected.to be_file }
 
       # old syntax?
@@ -37,4 +37,5 @@ describe 'ssh::server' do
       it { is_expected.to be_running }
     end
 	end
+
 end
